@@ -1,5 +1,5 @@
-import AboutCard from "./AboutCard";
-import VoiceSection from "./VoiceSection";
+import AboutCard from './AboutCard';
+import VoiceSection from './VoiceSection';
 
 export default function Hero() {
   return (

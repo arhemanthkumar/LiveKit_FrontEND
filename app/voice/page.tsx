@@ -3,16 +3,12 @@
 import { useEffect, useMemo } from 'react';
 import { TokenSource } from 'livekit-client';
 import { useSession } from '@livekit/components-react';
-
 import { APP_CONFIG_DEFAULTS } from '@/app-config';
 import { AgentSessionProvider } from '@/components/agents-ui/agent-session-provider';
 import { AgentSessionView_01 } from '@/components/agents-ui/blocks/agent-session-view-01';
 
 export default function VoicePage() {
-  const tokenSource = useMemo(
-    () => TokenSource.endpoint('/api/token'),
-    []
-  );
+  const tokenSource = useMemo(() => TokenSource.endpoint('/api/token'), []);
 
   const session = useSession(tokenSource, {
     agentName: APP_CONFIG_DEFAULTS.agentName,
@@ -26,9 +22,9 @@ export default function VoicePage() {
 
       try {
         await session.start();
-        console.log("CONNECTED");
+        console.log('CONNECTED');
       } catch (err) {
-        console.error("START FAILED", err);
+        console.error('START FAILED', err);
       }
     }
 

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { AnimatePresence, type MotionProps, motion } from 'motion/react';
 import { useAgent, useSessionContext, useSessionMessages } from '@livekit/components-react';
 import { AgentChatTranscript } from '@/components/agents-ui/agent-chat-transcript';
@@ -11,10 +12,6 @@ import {
 import { Shimmer } from '@/components/ai-elements/shimmer';
 import { cn } from '@/lib/shadcn/utils';
 import { TileLayout } from './tile-view';
-
-import { useRouter } from "next/navigation";
-
-
 
 const MotionMessage = motion.create(Shimmer);
 
@@ -271,8 +268,8 @@ export function AgentSessionView_01({
             isConnected={session.isConnected}
             onDisconnect={() => {
               session.end();
-              router.replace("/");
-              }}
+              router.replace('/');
+            }}
             onIsChatOpenChange={setChatOpen}
           />
         </div>

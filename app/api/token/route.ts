@@ -36,6 +36,7 @@ export async function POST(req: Request) {
     }
 
     // Parse room config from request body.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let body: any = {};
 
     try {

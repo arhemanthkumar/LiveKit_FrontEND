@@ -1,5 +1,5 @@
 // export default function FeatureCards() {
-  // const items = ['Education', 'Experience', 'Projects', 'Skills', 'Achievements'];
+// const items = ['Education', 'Experience', 'Projects', 'Skills', 'Achievements'];
 //
 //   return (
 //     <div className="mt-10 flex flex-wrap gap-3">

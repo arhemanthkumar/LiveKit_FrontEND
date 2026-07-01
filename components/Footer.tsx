@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,7 +7,6 @@ export default function Footer() {
         <p>© 2026 Hemanth Kumar</p>
 
         <div className="flex items-center gap-5 text-slate-300">
-
           <a
             href="https://github.com/arhemanthkumar"
             target="_blank"
@@ -17,7 +16,6 @@ export default function Footer() {
           >
             <Github className="h-5 w-5" />
           </a>
-
           <a
             href="https://www.linkedin.com/in/arhemanthkumar/"
             target="_blank"
@@ -27,7 +25,6 @@ export default function Footer() {
           >
             <Linkedin className="h-5 w-5" />
           </a>
-
           <a
             href="mailto:hemanthar95@gmail.com"
             aria-label="Email"
