@@ -12,6 +12,10 @@ import { Shimmer } from '@/components/ai-elements/shimmer';
 import { cn } from '@/lib/shadcn/utils';
 import { TileLayout } from './tile-view';
 
+import { useRouter } from "next/navigation";
+
+
+
 const MotionMessage = motion.create(Shimmer);
 
 const BOTTOM_VIEW_MOTION_PROPS: MotionProps = {
@@ -175,6 +179,7 @@ export function AgentSessionView_01({
   className,
   ...props
 }: React.ComponentProps<'section'> & AgentSessionView_01Props) {
+  const router = useRouter();
   const session = useSessionContext();
   const { messages } = useSessionMessages(session);
   const [chatOpen, setChatOpen] = useState(false);
@@ -264,7 +269,10 @@ export function AgentSessionView_01({
             controls={controls}
             isChatOpen={chatOpen}
             isConnected={session.isConnected}
-            onDisconnect={session.end}
+            onDisconnect={() => {
+              session.end();
+              router.replace("/");
+              }}
             onIsChatOpenChange={setChatOpen}
           />
         </div>

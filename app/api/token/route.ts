@@ -18,7 +18,7 @@ const LIVEKIT_URL = process.env.LIVEKIT_URL;
 export const revalidate = 0;
 
 export async function POST(req: Request) {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV === 'production') {
     throw new Error(
       'THIS API ROUTE IS INSECURE. DO NOT USE THIS ROUTE IN PRODUCTION WITHOUT AN AUTHENTICATION LAYER.'
     );
@@ -36,9 +36,18 @@ export async function POST(req: Request) {
     }
 
     // Parse room config from request body.
-    const body = await req.json();
-    const roomConfig = body?.room_config
-      ? RoomConfiguration.fromJson(body.room_config, { ignoreUnknownFields: true })
+    let body: any = {};
+
+    try {
+      body = await req.json();
+    } catch {
+      body = {};
+    }
+
+    const roomConfig = body.room_config
+      ? RoomConfiguration.fromJson(body.room_config, {
+          ignoreUnknownFields: true,
+        })
       : new RoomConfiguration();
 
     // Generate participant token
