@@ -14,7 +14,7 @@ export default function VoiceSection() {
           <span className="block text-cyan-400">about me.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-          Hi! I am Sarah, Hemanth Kumar is personal AI assistant. Ask me anything about his
+          Hi! I am Anjali, personal AI assistant of Hemanth Kumar. Ask me anything about his
           education, experience, projects, skills, and journey.
         </p>
       </div>
