@@ -8,7 +8,7 @@ export default function VoiceSection() {
   return (
     <div className="flex flex-col items-center gap-8 text-center">
       <div className="mx-auto max-w-3xl">
-        <p className="text-sm tracking-[0.4em] text-cyan-300 uppercase">Meet Sarah</p>
+        <p className="text-sm tracking-[0.4em] text-cyan-300 uppercase">Meet Anjali</p>
         <h1 className="mt-6 text-4xl leading-tight font-semibold text-white md:text-6xl">
           Talk to my AI Assistant
           <span className="block text-cyan-400">about me.</span>
