@@ -9,7 +9,7 @@ export default function Navbar() {
         </div>
         <div>
           <h1 className="text-lg font-semibold text-white">Hemanth Kumar</h1>
-          <p className="text-sm text-slate-300">`AI & Voice Automation Engineer`</p>
+          <p className="text-sm text-slate-300">AI & Voice Automation Engineer</p>
         </div>
       </div>
 
